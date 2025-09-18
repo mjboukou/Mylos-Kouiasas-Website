@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MYLOS KOUIASAS</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">MYLOS KOUIASAS</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#location">Location</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">MYLOS KOUIASAS</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#gallery" onclick="toggleMenu()">Gallery</a></li>
+          <li><a href="#location" onclick="toggleMenu()">Location</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/Mylos logo pic.png" alt="Mylos KOuiasa Logo pic" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, We are</p>
+        <h1 class="title">Mylos Kouiasas</h1>
+        <p class="section__text__p2">A hidden coffe shop in the forest!</p>
+        <div class="btn-container">
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/facebook-logo.webp"
+            alt="Facebook Profile"
+            class="icon"
+            onclick="location.href='https://www.facebook.com/myloskouiasas/?locale=el_GR'"
+          />
+          <img
+            src="./assets/instagram-logo.webp"
+            alt="Instagram Profile"
+            class="icon"
+            onclick="location.href='https://www.instagram.com/mylos_kouiasas/?hl=en'"
+          />
+          <img
+            src="./assets/tik-tok-logo.png"
+            alt="Tiktok Profile"
+            class="icon"
+            onclick="location.href='https://www.tiktok.com/@mylos.kouiasas'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Us</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/kataraktis-piso1.JPG"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <h3>The watermill</h3>
+              <p>The old stone house has been our beloved home
+                 for the past eight years. It was built many years
+                 ago and originally served as a watermill for a villager.
+                 Nowadays, it is used as a coffee shop.
+              </p>
+            </div>
+            <div class="details-container">
+              <h3>The Waterfalls</h3>
+              <p>The water flows down from the mountain,
+                 forming three waterfalls. Two of them are
+                 located near to the watermill, while the 
+                 third lies in a hidden spot, 
+                 just five minutes beyond it. Ask for more 
+                 details.
+              </p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+                the story behind the coffee shop and where it is 
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#gallery'"
+      />
+    </section>
+    <section id="gallery">
+      <p class="section__text__p1">Explore Our Home</p>
+      <h1 class="title">Gallery</h1>
+        <div class="carousel">
+          <div class="slides">
+            <img src="./assets/IMG_1745.JPG" alt="1">
+            <img src="./assets/IMG_1781.JPG" alt="2">
+            <img src="./assets/IMG_1841.JPG" alt="3">
+            <img src="./assets/IMG_4492.JPG" alt="4">
+            <img src="./assets/IMG_4647.JPG" alt="5">
+            <img src="./assets/IMG_5060.JPG" alt="6">
+            <img src="./assets/IMG_8944.JPG" alt="7">
+            <img src="./assets/IMG_9065.JPG" alt="8">
+            <img src="./assets/IMG_E3355.JPG" alt="9">
+            <img src="./assets/IMG_E5093.JPG" alt="10">
+          </div>
+          <button class="btn2 prev">&#10094;</button>
+          <button class="btn2 next">&#10095;</button>
+        </div>
+
+        <!-- Thumbnails below -->
+        <div class="thumbnails">
+          <img src="./assets/IMG_1745.JPG" alt="1">
+          <img src="./assets/IMG_1781.JPG" alt="2">
+          <img src="./assets/IMG_1841.JPG" alt="3">
+          <img src="./assets/IMG_4492.JPG" alt="4">
+          <img src="./assets/IMG_4647.JPG" alt="5">
+          <img src="./assets/IMG_5060.JPG" alt="6">
+          <img src="./assets/IMG_8944.JPG" alt="7">
+          <img src="./assets/IMG_9065.JPG" alt="8">
+          <img src="./assets/IMG_E3355.JPG" alt="9">
+           <img src="./assets/IMG_E5093.JPG" alt="10">
+        </div>
+        <script>
+          const slides = document.querySelector('.slides');
+          const images = document.querySelectorAll('.slides img');
+          const prevBtn = document.querySelector('.prev');
+          const nextBtn = document.querySelector('.next');
+          const thumbnails = document.querySelectorAll('.thumbnails img');
+
+          let index = 0;
+
+          function showSlide(i) {
+            index = (i + images.length) % images.length;
+            const slideWidth = document.querySelector('.carousel').clientWidth;
+            slides.style.transform = `translateX(${-index * slideWidth}px)`;
+
+            // highlight active thumbnail
+            thumbnails.forEach((thumb, tIndex) => {
+              thumb.classList.toggle("active", tIndex === index);
+            });
+          }
+
+          nextBtn.addEventListener('click', () => showSlide(index + 1));
+          prevBtn.addEventListener('click', () => showSlide(index - 1));
+
+          thumbnails.forEach((thumb, tIndex) => {
+            thumb.addEventListener('click', () => showSlide(tIndex));
+          });
+
+          // Auto-play every 3s
+          setInterval(() => showSlide(index + 1), 3000);
+
+          // Recalculate on resize
+          window.addEventListener('resize', () => showSlide(index));
+
+          // Init
+          showSlide(0);
+        </script>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#location'"
+      />
+    </section>
+    <section id="location">
+      <h1 class="title">Our Location</h1>
+      <p class="section__text__p1">From Google Maps</p>
+      <div class="container_map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d98360.
+        70084492619!2d20.905733338160523!3d39.60982049754832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
+        1!3m3!1m2!1s0x13595fd92baf32df%3A0xdcc0b48c673a41f!2sCafe%20Mylos%20Kouiasas!5e0!3m2!1sen!
+        2sgr!4v1758125079195!5m2!1sen!2sgr" width="600" height="450" style="border:0;"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <h1 class="title">Get in Touch and Contact Us</h1>
+      <p class="section__text__p1">On our Social Media!</p>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/facebook-logo.webp"
+            alt="Facebook Profile"
+            class="icon"
+            onclick="location.href='https://www.facebook.com/myloskouiasas/?locale=el_GR'"
+          />
+          <img
+            src="./assets/instagram-logo.webp"
+            alt="Instagram Profile"
+            class="icon"
+            onclick="location.href='https://www.instagram.com/mylos_kouiasas/?hl=en'"
+          />
+          <img
+            src="./assets/tik-tok-logo.png"
+            alt="Tiktok Profile"
+            class="icon"
+            onclick="location.href='https://www.tiktok.com/@mylos.kouiasas'"
+          />
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2025 Michail Boukouvalas. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
